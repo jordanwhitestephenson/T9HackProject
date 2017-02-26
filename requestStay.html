@@ -30,34 +30,36 @@
 
 <body>
     <div class="jumbotron text-center">
-        <h1>Welcome to the Lighthouse</h1>
+        <h1>Find Your Light House</h1>
         <p>It is during our darkest moments that we must focus on the light.</p>
         <p> -Aristotle </p>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>What</h3>
-                <p>Providing information for women in search for a safe place to stay or looking for the right resources. </p>
-                <p> [INSERT BUTTON THAT LINKS TO HOTLINE RESOURCE]</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Who</h3>
-                <p>We wanted to create a resource for women looking for a place to stay, or someone to talk to. </p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Where</h3>
-                <p>Need a safe place to stay?</p>
-                <p>[INSERT BUTTON FOR ANOTHER WEBPAGE]</p>
-            </div>
+    <form>
+        <div class="form-group">
+            <label for="formGroupExampleInput"> Light House Name </label>
+            <input type="text" class="form-control" placeholder="Input Your Light House Name" id="lightHouseName">
         </div>
-    </div>
-      <div>
-        <button type="button" class="clickme">Click Me!</button>
-      </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput"> Requested Area </label>
+            <input type="text" class="form-control" id="hostAddress" placeholder="Approximat e Light House Area ">
+        </div>
 
-            <script src="app.js" charset="utf-8"></script>
+        <fieldset class="form-group">
+            <legend>Do You have Children?</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="children" value="Yes" checked> Yes </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="children" value="No"> No </label>
+            </div>
+        </fieldset>
+    </form>
+    <button type="button" class="requestHouse"> Request A Light House</button>
+
+    <script src="app.js" charset="utf-8"></script>
 </body>
 
 </html>

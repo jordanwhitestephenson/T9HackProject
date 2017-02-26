@@ -1,8 +1,89 @@
 .jumbotron{
 background-image: url('sky.jpg');
-height: 280px;
+height: 240px;
+background-size: cover;
+background-repeat: no-repeat;
+margin-bottom: 10px;
+font-family: 'Tangerine', serif;
+font-weight: bold;
 }
 
-h1{
-  color = "white";
+.jumbotron > h1 {
+  color: #2d2a70;
+  font-size: 76px;
 }
+.title {
+font-size: 40px;
+font-weight: 600;
+color: #2d2a70;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+}
+.overallInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 250px;
+
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+.lightHousePhotos {
+    padding: 10px;
+    border-radius: 26%;
+}
+
+#map{
+  height: 400px;
+  height: 400px;
+}
+/*element.style {
+  width: 389px;
+  height: 300px;
+  z-index: 0;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  cursor: -webkit-grab;
+}*/
+#footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    height: 95px;
+    margin-top: 30px;
+    padding-top: 20px;
+    background-color: #c8bad8;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer-block {
+    padding-top: 15px;
+    padding-left: 5px;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 5px
+  }
+  .anchor {
+    /*padding-bottom: 10px;
+    margin-bottom: 30px;*/
+
+  }

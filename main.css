@@ -15,6 +15,29 @@ background:#e0ccff;
 color:black;
 }
 
+#DamnJumboTronInformation{
+       padding-top: 1px;
+       padding-bottom: 18px;
+       height: 250px
+       }
+#DamnJumboTronHotlines {
+ padding-top: 1px;
+ padding-bottom: 18px;
+ height: 250px
+ }
+
+#DamnJumboTronRequestStay {
+ padding-top: 1px;
+ padding-bottom: 18px;
+ height: 250px
+ }
+ #DamnJumboTronRegister {
+   padding-top: 1px;
+   padding-bottom: 18px;
+   height: 250px
+
+ }
+
 #button:hover{
  background:#674b83;
  color: white;

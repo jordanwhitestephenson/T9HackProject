@@ -2,42 +2,50 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>T9 hacks project</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
-    </script>
-    <link href="main.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src = "https://www.mapquestapi.com/sdk/js/v7.2.s/mqa.toolkit.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Lighthouse Keeper</title>
+   <meta charset="utf-8">
+   <title>T9 hacks project</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+   </script>
+   <link href="main.css" type="text/css" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src = "https://www.mapquestapi.com/sdk/js/v7.2.s/mqa.toolkit.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <title>Lighthouse Keeper</title>
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyB2o9QHpB6vy9I3pAwdZFoVmarHUfpJcDQ",
-            authDomain: "t9hackproject-8174b.firebaseapp.com",
-            databaseURL: "https://t9hackproject-8174b.firebaseio.com",
-            storageBucket: "t9hackproject-8174b.appspot.com",
-            messagingSenderId: "187899690145"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-
+   <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+   <script>
+       // Initialize Firebase
+       var config = {
+           apiKey: "AIzaSyB2o9QHpB6vy9I3pAwdZFoVmarHUfpJcDQ",
+           authDomain: "t9hackproject-8174b.firebaseapp.com",
+           databaseURL: "https://t9hackproject-8174b.firebaseio.com",
+           storageBucket: "t9hackproject-8174b.appspot.com",
+           messagingSenderId: "187899690145"
+       };
+       firebase.initializeApp(config);
+   </script>
 </head>
+<body class = "purple">
 
-<body>
-  <div id = "map"></div>
-    <table id="clean">
-
-    </table>
-
-
-
-    <script src="maps.js" charset="utf-8"></script>
+ <div class="jumbotron text-center" id ="DamnJumboTronRequestStay">
+     <div class= "title">
+       <h2 class = "lightHouseTitle"> The Light House </h2>
+       <h4 id = "slogan">
+         <p>It is during our darkest moments that we must focus on the light. -    Aristotle </p>
+       <img src="logo2.png" id = "logo2" height = "175px" width = "170px"/></h4>
+       </div>
+ </div>
+<div class="mapStyle">
+           <div class="container" id="map_canvas" style="height: 350px; width: 80%; border: 1px solid rgba(136, 233, 173, .1) ">
+           </div>
+       </div>
 </body>
+
+   <script src="maps.js" charset="utf-8"></script>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDres7kYD6e0HNJB8qKUQ9CO4O-NlduBWM&libraries=places"></script>
+   <link href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyDres7kYD6e0HNJB8qKUQ9CO4O-NlduBWM">
+
+
 
 </html>

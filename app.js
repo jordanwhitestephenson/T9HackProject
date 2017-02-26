@@ -36,8 +36,6 @@ function writeUserData(name, address, child, phone) {
 
 $('.clickme').click(function() {
     $('#form-fields').hide();
-    console.log("HEE HAW!!!");
-    console.log("children: " + $('#children').val());
   writeUserData($('#hostName').val(), $('#hostAddress').val(), $('#children').val(), $('#hostNumber').val() );
   var node = document.createElement("H2");
   var textnode = document.createTextNode('THANK YOU FOR OPENING YOUR HOME TO US!!');
@@ -56,7 +54,6 @@ $('.requestHouse').click(function() {
   var cnt = 0;
   $('#form-fields').hide();
   var childrenOkay = $('#children').val();
-  console.log("chidren:" + childrenOkay);
 
     refData.on("value",function(snapshot){
       var userHouseData = snapshot.val();
@@ -64,33 +61,17 @@ $('.requestHouse').click(function() {
         if(cnt === 0){
           var tablehead = "<th>" + "---"+ "</th>" +
                "<th>" + "Name" + "</th>"+ "<th>" + "Address" + "</th>" + "<th>" + "Phone Number" + "</th>" + "</tr>"
-               $(tablehead).appendTo("#listdata thead");
+               console.log("Tablehead" + tablehead)
+               $(tablehead).appendTo("#listdata23 thead");
         }
         if(userHouseData[i] !== undefined){
           if (userHouseData[i].user_children === childrenOkay){
-            cnt++;
+            cnt=1;
              var list = "<tr>" + "<th scope='row'>" + "*" +  "<td>" + userHouseData[i].username+ "</td>" + "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>"
-                    $(list).appendTo("#listdata tbody");
-            var list = "<tr>" + "<td>" + userHouseData[i].username+ "</td>" +
-                   "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>";
-                }
-                console.log(list);
-                $(list).appendTo("#listdata tbody");
-                // window.location.href = "list.html";
-
+             console.log("List" + list)
+              $(list).appendTo("#listdata23 tbody");
           }
         }
-        cnt++;
       }
     });
 });
-
-
-
-
-
-
-
- // , function (errorObject){
- //     console.log("the read failed:" + errorObject.code);
- //   })

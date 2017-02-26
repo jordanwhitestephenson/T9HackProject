@@ -8,7 +8,30 @@ font-family: 'Tangerine', serif;
 font-weight: bold;
 }
 
-<<<<<<< HEAD
+#button{
+background:#e0ccff;
+}
+
+#button:hover{
+ background:#674b83;
+ color: white;
+}
+
+#hostName, #hostAddress{
+  width:300px;
+}
+
+#hostNumber{
+  width:150px;
+}
+
+#ReqName{
+  width:300px;
+}
+
+#children{
+  width:100px;
+}
 
 h1{
   color = "white";
@@ -44,7 +67,7 @@ h1{
  padding-bottom: 5px
 
  }
-=======
+
 .jumbotron > h1 {
   color: #2d2a70;
   font-size: 76px;
@@ -124,4 +147,3 @@ align-content: center;
     margin-bottom: 30px;*/
 
   }
->>>>>>> ba7670017d88db64f3f757b6fb060bd3f690d2f7

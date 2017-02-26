@@ -35,31 +35,33 @@
         <p> -Aristotle </p>
     </div>
     <div>
-    <form id='form-fields'>
+    <form id='form-fields' class='request_form' align='center'>
         <!-- <div class="form-group"> -->
-        <div class= "col-4">
+        <div class= "col-4"  align='center'>
             <label for="formGroupExampleInput"> Your reason of request </label>
             <input type="text" class="form-control" placeholder="" id="ReqName" width="40">
         </div>
+        <br>
 
-      <div class= "col-4">
+      <div class= "col-4"  align='center'>
             <label for="formGroupExampleInput"> Do you have any children with you? </label>
-            <input type="text" class="form-control" placeholder="yes/no" id="children" width="40">
-        </div>
-        <button type="button" class="requestHouse"> Request A Light House</button>
+            <input type="text" class="form-control" placeholder="yes/no" id="children" width="40"><br><br>
+        </div  align='center'>
+        <button type="button" class="requestHouse" id="button"> Request A Light House</button>
 
     </form>
     </div>
     <div class="list" id="list">
-      <table id= "listdata">
+      <table class="table table-hover" id="listdata">
+        <thead>
+        </thead>
                  <tbody>
                  </tbody>
       </table>
 
     </div>
     <div id="footer">
-     <img src ="Logo.png" class = "logo" />
-       <p class="footer-block"> The Light House Group (C) 2017 All Rights Reserved </p>
+<a href="index.html"><img src ="Logo.png" class = "logo" /></a>       <p class="footer-block"> The Light House Group (C) 2017 All Rights Reserved </p>
      </div>
 
     <script src="app.js" charset="utf-8"></script>

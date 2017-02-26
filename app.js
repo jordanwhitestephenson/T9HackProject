@@ -10,7 +10,6 @@ function myFunction() {
 }
 
 function writeUserData(name, address, child, phone) {
-  console.log("inside writeUserData")
   firebase.database().ref('/users/').once('value').then(function(snapshot) {
     var userId;
     if (snapshot.val()) {
@@ -35,14 +34,11 @@ function writeUserData(name, address, child, phone) {
 
 $('.clickme').click(function() {
     $('#form-fields').hide();
-    console.log("HEE HAW!!!")
-    console.log("children: " + $('#children').val())
   writeUserData($('#hostName').val(), $('#hostAddress').val(), $('#children').val(), $('#hostNumber').val() );
   var node = document.createElement("H2");
   var textnode = document.createTextNode('THANK YOU FOR OPENING YOUR HOME TO US!!');
   node.appendChild(textnode);
   document.getElementById("thankyou").appendChild(node);
-    // window.location.href = "thankyou.html";
 });
 
 
@@ -53,27 +49,33 @@ $('.clickme').click(function() {
 
 
 $('.requestHouse').click(function() {
-
+  var cnt = 0;
   $('#form-fields').hide();
   var childrenOkay = $('#children').val();
-  console.log("chidren:" + childrenOkay)
-
     refData.on("value",function(snapshot){
       var userHouseData = snapshot.val();
-      for (var i =0; i < userHouseData.length; i ++) {
+      for (var i = 0; i < userHouseData.length; i ++) {
+        if(cnt === 0){
+          var tablehead = "<th>" + "---"+ "</th>" +
+               "<th>" + "Name" + "</th>"+ "<th>" + "Address" + "</th>" + "<th>" + "Phone Number" + "</th>" + "</tr>"
+               $(tablehead).appendTo("#listdata thead");
+        }
         if(userHouseData[i] !== undefined){
           if (userHouseData[i].user_children === childrenOkay){
-            var list = "<tr>" + "<td>" + userHouseData[i].username+ "</td>" +
-                   "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>"
-                }
-                console.log(list);
-                $(list).appendTo("#listdata tbody");
-                // window.location.href = "list.html";
+            cnt++;
+             var list = "<tr>" + "<th scope='row'>" + "*" +  "<td>" + userHouseData[i].username+ "</td>" + "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>"
+                    $(list).appendTo("#listdata tbody");
 
+          }
         }
+        cnt++;
       }
     })
 })
+
+
+
+
 
 
 

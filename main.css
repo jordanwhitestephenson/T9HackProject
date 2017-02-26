@@ -7,10 +7,12 @@ background-repeat: no-repeat;
 margin-bottom: 10px;
 font-family: 'Tangerine', serif;
 font-weight: bold;
+padding-top: 1px;
 }
 
 #button{
 background:#e0ccff;
+color:black;
 }
 
 #button:hover{
@@ -33,15 +35,6 @@ background:#e0ccff;
 #children{
   width:100px;
 }
-    .jumbotron {
-    background-image: url('sky.jpg');
-    height: 240px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
-    font-family: 'Tangerine', serif;
-    font-weight: bold;
-    padding-top: 1px;
 
 }
 #slogan {
@@ -55,6 +48,14 @@ background:#e0ccff;
     }
 #logo2 {
   padding-bottom: 20px
+}
+
+#one {
+    opacity: 0.7;
+}
+
+#one:hover {
+    opacity: 1;
 }
 
 

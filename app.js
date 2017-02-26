@@ -1,4 +1,5 @@
 var database = firebase.database();
+var list;
 // var admin = require('firebase-admin');
 // var db = admin.database();
 var refData = database.ref('users');
@@ -8,7 +9,8 @@ function myFunction() {
     document.getElementById("findPlaces").classList.toggle("show");
 }
 
-function writeUserData(name, address, child) {
+function writeUserData(name, address, child, phone) {
+  console.log("inside writeUserData");
   firebase.database().ref('/users/').once('value').then(function(snapshot) {
     var userId;
     if (snapshot.val()) {
@@ -23,7 +25,8 @@ function writeUserData(name, address, child) {
     firebase.database().ref('users/' + userId).set({
       username: name,
       user_address: address,
-      user_children: child
+      user_children: child,
+      user_phone: phone
 
     });
   });
@@ -31,27 +34,49 @@ function writeUserData(name, address, child) {
 
 
 $('.clickme').click(function() {
-  writeUserData($('#hostName').val(), $('#hostAddress').val(), $('#children').val());
+    $('#form-fields').hide();
+    console.log("HEE HAW!!!");
+    console.log("children: " + $('#children').val());
+  writeUserData($('#hostName').val(), $('#hostAddress').val(), $('#children').val(), $('#hostNumber').val() );
+  var node = document.createElement("H2");
+  var textnode = document.createTextNode('THANK YOU FOR OPENING YOUR HOME TO US!!');
+  node.appendChild(textnode);
+  document.getElementById("thankyou").appendChild(node);
+    // window.location.href = "thankyou.html";
 });
+
+
+
+
+
+
 
 
 $('.requestHouse').click(function() {
-var childrenOkay = $('#children').val();
-console.log(childrenOkay);
 
-  refData.on("value",function(snapshot){
-    // console.log(snapshot.val());
-    var userHouseData = snapshot.val();
-    for (var i =0; i < userHouseData.length; i ++) {
-      console.log(userHouseData);
-      if(userHouseData[i] !== undefined){
-      if (userHouseData[i].user_children === childrenOkay){
-        console.log("were at the if statement");
-        console.log(userHouseData[i].user_children);
+  $('#form-fields').hide();
+  var childrenOkay = $('#children').val();
+  console.log("chidren:" + childrenOkay);
+
+    refData.on("value",function(snapshot){
+      var userHouseData = snapshot.val();
+      for (var i =0; i < userHouseData.length; i ++) {
+        if(userHouseData[i] !== undefined){
+          if (userHouseData[i].user_children === childrenOkay){
+            var list = "<tr>" + "<td>" + userHouseData[i].username+ "</td>" +
+                   "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>";
+                }
+                console.log(list);
+                $(list).appendTo("#listdata tbody");
+                // window.location.href = "list.html";
+
+        }
       }
-    }
-  }
-}, function (errorObject){
-    console.log("the read failed:" + errorObject.code);
-  });
+    });
 });
+
+
+
+ // , function (errorObject){
+ //     console.log("the read failed:" + errorObject.code);
+ //   })

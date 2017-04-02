@@ -13,6 +13,7 @@ padding-top: 1px;
 #button{
 background:#e0ccff;
 color:black;
+padding-bottom: 50px
 }
 
 #button:hover{
@@ -46,6 +47,33 @@ color:black;
         padding-top: 1px;
         padding-bottom: 18px;
     }
+#DamnJumboTronInformation{
+        padding-top: 1px;
+        padding-bottom: 18px;
+        height: 300px
+        }
+#DamnJumboTronHotlines {
+  padding-top: 1px;
+  padding-bottom: 18px;
+  height: 250px
+  }
+
+#DamnJumboTronRequestStay {
+  padding-top: 1px;
+  padding-bottom: 18px;
+  height: 250px
+  }
+
+  #DamnJumboTronRegister {
+    padding-top: 1px;
+    padding-bottom: 18px;
+    height: 250px
+
+  }
+  .map {
+    color: #000;
+  }
+}
 #logo2 {
   padding-bottom: 20px
 }

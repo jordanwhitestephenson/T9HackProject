@@ -3,7 +3,7 @@ var list;
 // var admin = require('firebase-admin');
 // var db = admin.database();
 var refData = database.ref('users');
-$.get("http://www.mapquestapi.com/search/v2/radius?key=qyNSnqk6s1mOGQMQZtkpGDvg9stlKSfJmaxMatches=4&origin=39.750307,-104.999472");
+
 
 function myFunction() {
     document.getElementById("findPlaces").classList.toggle("show");
@@ -68,6 +68,7 @@ $('.requestHouse').click(function() {
           if (userHouseData[i].user_children === childrenOkay){
             cnt=1;
              var list = "<tr>" + "<th scope='row'>" + "*" +  "<td>" + userHouseData[i].username+ "</td>" + "<td>" + userHouseData[i].user_address + "</td>" + "<td>" + userHouseData[i].user_phone + "</td>" + "</tr>"
+
              console.log("List" + list)
               $(list).appendTo("#listdata23 tbody");
           }
@@ -75,3 +76,4 @@ $('.requestHouse').click(function() {
       }
     });
 });
+
